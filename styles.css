@@ -30,8 +30,9 @@ body {
   z-index: 10;
   display: flex;
   gap: 18px;
-  padding: 18px clamp(28px, 6vw, 96px);
+  padding: 40px clamp(28px, 6vw, 96px) 24px;
   background: #fff;
+  border-bottom: 1px solid var(--hairline);
 }
 
 .journey-tab {
@@ -43,6 +44,7 @@ body {
   font-size: 10px;
   line-height: 1.5;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--muted);
   cursor: pointer;
 }
@@ -441,7 +443,7 @@ footer {
 
 @media (max-width: 520px) {
   .journey-nav {
-    padding: 14px 22px;
+    padding: 32px 22px 18px;
     gap: 14px;
   }
 
