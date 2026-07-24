@@ -15,7 +15,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -29,8 +29,11 @@ body {
   top: 0;
   z-index: 10;
   display: flex;
+  align-items: center;
   gap: 18px;
-  padding: 40px clamp(28px, 6vw, 96px) 24px;
+  width: 100%;
+  min-height: 56px;
+  padding: 0 clamp(28px, 6vw, 96px);
   background: #fff;
   border-bottom: 1px solid var(--hairline);
 }
@@ -42,7 +45,7 @@ body {
   background: none;
   font: inherit;
   font-size: 10px;
-  line-height: 1.5;
+  line-height: 1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
@@ -58,8 +61,21 @@ body {
   color: var(--ink);
 }
 
-.journey-panel[hidden] {
-  display: none;
+.journey-panel {
+  scroll-margin-top: var(--journey-nav-height, 56px);
+}
+
+.journey-panel + .journey-panel {
+  padding-top: min(20vh, 180px);
+  border-top: 1px solid var(--hairline);
+}
+
+.journey-panel > .review:first-child {
+  padding-top: 120px;
+}
+
+.journey-panel + .journey-panel > .review:first-child {
+  padding-top: 0;
 }
 
 .journey-empty {
@@ -443,8 +459,13 @@ footer {
 
 @media (max-width: 520px) {
   .journey-nav {
-    padding: 32px 22px 18px;
+    min-height: 52px;
+    padding: 0 22px;
     gap: 14px;
+  }
+
+  .journey-panel + .journey-panel {
+    padding-top: min(16vh, 120px);
   }
 
   .masthead {
