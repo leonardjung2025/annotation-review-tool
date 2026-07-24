@@ -24,6 +24,51 @@ body {
   background: #fff;
 }
 
+.journey-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  gap: 18px;
+  padding: 18px clamp(28px, 6vw, 96px);
+  background: #fff;
+}
+
+.journey-tab {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.journey-tab.is-active {
+  color: var(--ink);
+}
+
+.journey-tab:hover,
+.journey-tab:focus-visible {
+  color: var(--ink);
+}
+
+.journey-panel[hidden] {
+  display: none;
+}
+
+.journey-empty {
+  min-height: 40vh;
+  margin: 0;
+  padding: 160px clamp(24px, 5vw, 76px) 220px;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
 .masthead {
   min-height: 88vh;
   padding: 54px clamp(28px, 6vw, 96px);
@@ -137,6 +182,105 @@ footer p {
   --callout-target-x: 17%;
 }
 
+.screenshot-sequence {
+  --callout-y: 55.61%;
+  --callout-target-x: 16.8%;
+}
+
+.screenshot-j2-opening {
+  --callout-y: 56.69%;
+  --callout-target-x: 16%;
+}
+
+.screenshot-j2-menu {
+  --callout-y: 7.38%;
+  --callout-target-x: 71.8%;
+}
+
+.screenshot-j2-carousel {
+  --callout-y: 83%;
+  --callout-target-x: 35%;
+}
+
+.screenshot-j2-compare {
+  --callout-y: 18.4%;
+  --callout-target-x: 23%;
+}
+
+.screenshot-j2-flow-end {
+  --callout-y: 91.5%;
+  --callout-target-x: 16%;
+}
+
+.screenshot-j3-chips {
+  --callout-y: 62%;
+  --callout-target-x: 15%;
+}
+
+.screenshot-j3-shirts {
+  --callout-y: 37.11%;
+  --callout-target-x: 70.28%;
+}
+
+.screenshot-j3-recommendation {
+  --callout-y: 74%;
+  --callout-target-x: 50%;
+}
+
+.screenshot-j3-sizing {
+  --callout-y: 25.7%;
+  --callout-target-x: 13%;
+}
+
+.screenshot-j3-signin {
+  --callout-y: 52%;
+  --callout-target-x: 14%;
+}
+
+.screenshot-j3-personalized {
+  --callout-y: 26%;
+  --callout-target-x: 45%;
+}
+
+.screenshot-j3-outfit {
+  --callout-y: 66%;
+  --callout-target-x: 37%;
+}
+
+.screenshot-j3-compare {
+  --callout-y: 65%;
+  --callout-target-x: 47%;
+}
+
+.screenshot-j3-table {
+  --callout-y: 61%;
+  --callout-target-x: 54%;
+}
+
+.screenshot-j3-outfit-ask {
+  --callout-y: 72%;
+  --callout-target-x: 54%;
+}
+
+.screenshot-j3-product-card {
+  --callout-y: 38%;
+  --callout-target-x: 22%;
+}
+
+.screenshot-j3-gallery {
+  --callout-y: 47%;
+  --callout-target-x: 22%;
+}
+
+.screenshot-j3-checkout {
+  --callout-y: 50%;
+  --callout-target-x: 64%;
+}
+
+.journey-recommendation + .journey-recommendation {
+  padding-top: 0;
+}
+
 .screenshot img {
   display: block;
   width: 100%;
@@ -191,6 +335,29 @@ footer p {
 
 .annotation p:last-child {
   margin: 8px 0 0;
+  font-size: 10.5px;
+  line-height: 1.55;
+  letter-spacing: -0.025em;
+}
+
+.journey-recommendation {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 48px clamp(24px, 5vw, 76px) 220px;
+}
+
+.journey-recommendation-label {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.journey-recommendation p:last-child {
+  max-width: 520px;
+  margin: 0;
   font-size: 10.5px;
   line-height: 1.55;
   letter-spacing: -0.025em;
@@ -273,12 +440,21 @@ footer {
 }
 
 @media (max-width: 520px) {
+  .journey-nav {
+    padding: 14px 22px;
+    gap: 14px;
+  }
+
   .masthead {
     padding: 32px 22px;
   }
 
   .review {
     padding: 90px 22px 140px;
+  }
+
+  .journey-recommendation {
+    padding: 32px 22px 140px;
   }
 
   .section-heading {

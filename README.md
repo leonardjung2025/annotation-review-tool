@@ -22,6 +22,10 @@ npm run preview
 
 Local dev: [http://localhost:5173/](http://localhost:5173/)
 
+Published: [https://leonardjung2025.github.io/annotation-review-tool/](https://leonardjung2025.github.io/annotation-review-tool/)
+
+Journey 3 feedback (direct link): [https://leonardjung2025.github.io/annotation-review-tool/#journey-3](https://leonardjung2025.github.io/annotation-review-tool/#journey-3)
+
 ## Annotation pattern
 
 Each section includes:
