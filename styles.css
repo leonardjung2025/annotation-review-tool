@@ -16,6 +16,7 @@
 
 html {
   scroll-behavior: auto;
+  scroll-padding-top: var(--journey-nav-height, 56px);
 }
 
 body {
@@ -39,6 +40,8 @@ body {
 }
 
 .journey-tab {
+  display: inline-flex;
+  align-items: center;
   margin: 0;
   padding: 0;
   border: 0;
@@ -48,8 +51,11 @@ body {
   line-height: 1;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-decoration: none;
   color: var(--muted);
   cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .journey-tab.is-active {

@@ -8,11 +8,19 @@ function easeOutCubic(t) {
   return 1 - (1 - t) ** 3;
 }
 
+function getScrollY() {
+  return window.scrollY || document.documentElement.scrollTop || 0;
+}
+
 function getNavHeight() {
   if (!nav) return 0;
   const height = nav.offsetHeight;
   document.documentElement.style.setProperty("--journey-nav-height", `${height}px`);
   return height;
+}
+
+function getTargetY(panel) {
+  return panel.getBoundingClientRect().top + getScrollY() - getNavHeight();
 }
 
 function setActiveTab(journeyId) {
@@ -23,32 +31,37 @@ function setActiveTab(journeyId) {
   });
 }
 
+function scrollToY(targetY) {
+  window.scrollTo(0, targetY);
+  document.documentElement.scrollTop = targetY;
+  document.body.scrollTop = targetY;
+}
+
 function scrollToJourney(journeyId, { animate = true, updateHash = true } = {}) {
   const panel = document.getElementById(journeyId);
   if (!panel) return;
 
   setActiveTab(journeyId);
 
-  const navHeight = getNavHeight();
-  const targetY = panel.getBoundingClientRect().top + window.scrollY - navHeight;
+  const targetY = getTargetY(panel);
+  const startY = getScrollY();
+  const distance = targetY - startY;
 
-  if (!animate) {
-    window.scrollTo(0, targetY);
+  if (!animate || Math.abs(distance) < 2) {
+    scrollToY(targetY);
     if (updateHash) history.replaceState(null, "", `#${journeyId}`);
     return;
   }
 
   if (scrollAnimation) cancelAnimationFrame(scrollAnimation);
 
-  const startY = window.scrollY;
-  const distance = targetY - startY;
   const duration = Math.min(1200, Math.max(650, Math.abs(distance) * 0.55));
   let startTime = null;
 
   function step(timestamp) {
     if (!startTime) startTime = timestamp;
     const progress = Math.min((timestamp - startTime) / duration, 1);
-    window.scrollTo(0, startY + distance * easeOutCubic(progress));
+    scrollToY(startY + distance * easeOutCubic(progress));
 
     if (progress < 1) {
       scrollAnimation = requestAnimationFrame(step);
@@ -58,24 +71,26 @@ function scrollToJourney(journeyId, { animate = true, updateHash = true } = {}) 
     }
   }
 
-  scrollAnimation = requestAnimationFrame(step);
+  // Kick off synchronously so mobile browsers keep the user-gesture scroll unlock.
+  step(performance.now());
 }
 
 function getVisibleJourney() {
-  const navHeight = getNavHeight();
-  const anchorY = navHeight + 24;
-
+  const anchorY = getNavHeight() + 24;
   let current = panels[0]?.id;
+
   panels.forEach((panel) => {
-    const top = panel.getBoundingClientRect().top;
-    if (top <= anchorY) current = panel.id;
+    if (panel.getBoundingClientRect().top <= anchorY) current = panel.id;
   });
 
   return current;
 }
 
 tabs.forEach((tab) => {
-  tab.addEventListener("click", () => scrollToJourney(tab.dataset.journey));
+  tab.addEventListener("click", (event) => {
+    event.preventDefault();
+    scrollToJourney(tab.dataset.journey);
+  });
 });
 
 window.addEventListener(
@@ -99,3 +114,10 @@ if (panels.some((panel) => panel.id === initialJourney)) {
 } else {
   setActiveTab(panels[0]?.id ?? "journey-1");
 }
+
+window.addEventListener("hashchange", () => {
+  const journeyId = location.hash.replace("#", "");
+  if (panels.some((panel) => panel.id === journeyId)) {
+    scrollToJourney(journeyId, { animate: true, updateHash: false });
+  }
+});
