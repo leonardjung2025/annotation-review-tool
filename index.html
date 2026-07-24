@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A spacious, annotated product review of the lululemon chat experience."
+    />
+    <title>Lululemon chat review</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <nav class="journey-nav" aria-label="Journeys">
+      <button
+        type="button"
+        class="journey-tab is-active"
+        data-journey="journey-1"
+        aria-current="page"
+      >
+        Journey 1
+      </button>
+      <button type="button" class="journey-tab" data-journey="journey-2">
+        Journey 2
+      </button>
+      <button type="button" class="journey-tab" data-journey="journey-3">
+        Journey 3
+      </button>
+    </nav>
+
+    <header class="masthead">
+      <p class="eyebrow">Sierra / Product review</p>
+      <h1>Lululemon chat</h1>
+      <p class="date">July 23, 2026</p>
+    </header>
+
+    <main>
+      <div class="journey-panel is-active" id="journey-1" data-journey="journey-1">
+      <section class="review" aria-labelledby="review-title">
+        <div class="section-heading">
+          <p class="index">01</p>
+          <div>
+            <h2 id="review-title">Opening state</h2>
+          </div>
+        </div>
+
+        <div class="review-canvas">
+          <figure class="screenshot screenshot-opening">
+            <article class="annotation annotation-trust">
+              <p class="annotation-label">Trust</p>
+              <p>
+                “I can help with lots” overpromises without specifics, lowering
+                trust in the opening.
+              </p>
+            </article>
+            <img
+              src="./review-opening.png?v=512"
+              alt="Opening state of the Ask lululemon chat panel"
+            />
+            <span class="callout-line" aria-hidden="true"></span>
+            <span class="callout-endpoint" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+
+      <section class="review" id="on-product-page" aria-labelledby="pdp-title">
+        <div class="section-heading">
+          <p class="index">02</p>
+          <div>
+            <h2 id="pdp-title">On product page</h2>
+          </div>
+        </div>
+
+        <div class="review-canvas">
+          <figure class="screenshot screenshot-pdp">
+            <article class="annotation annotation-value">
+              <p class="annotation-label">Value</p>
+              <p>
+                A single sizing chip makes chat feel like PDP duplication, so
+                users may bounce before trying it.
+              </p>
+            </article>
+            <img
+              src="./review-pdp.png?v=512"
+              alt="Ask lululemon chat on a product page with a sizing chart suggestion"
+            />
+            <span class="callout-line" aria-hidden="true"></span>
+            <span class="callout-endpoint" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+
+      <section class="review" id="sizing-response" aria-labelledby="sizing-title">
+        <div class="section-heading">
+          <p class="index">03</p>
+          <div>
+            <h2 id="sizing-title">Sizing response</h2>
+          </div>
+        </div>
+
+        <div class="review-canvas">
+          <figure class="screenshot screenshot-sizing">
+            <article class="annotation annotation-utility">
+              <p class="annotation-label">Utility</p>
+              <p>
+                Linking to the size guide adds no insight beyond what users
+                could find themselves—no AI unpacking at all.
+              </p>
+            </article>
+            <img
+              src="./review-sizing-link.png?v=512"
+              alt="Ask lululemon chat response linking out to the sizing guide"
+            />
+            <span class="callout-line" aria-hidden="true"></span>
+            <span class="callout-endpoint" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+
+      <section class="review" id="sizing-intent" aria-labelledby="intent-title">
+        <div class="section-heading">
+          <p class="index">04</p>
+          <div>
+            <h2 id="intent-title">Size &amp; fit</h2>
+          </div>
+        </div>
+
+        <div class="review-canvas">
+          <figure class="screenshot screenshot-intent">
+            <article class="annotation annotation-guidance">
+              <p class="annotation-label">Guidance</p>
+              <p>
+                Generic chips make users self-diagnose—AI should recognize
+                size-and-fit intent and surface the paths that apply.
+              </p>
+            </article>
+            <img
+              src="./review-sizing-burden.png?v=512"
+              alt="Ask lululemon chat asking users to choose between generic sizing chips"
+            />
+            <span class="callout-line" aria-hidden="true"></span>
+            <span class="callout-endpoint" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+
+      <section class="review" id="fit-comparison" aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <p class="index">05</p>
+          <div>
+            <h2 id="comparison-title">Fit comparison</h2>
+          </div>
+        </div>
+
+        <div class="review-canvas">
+          <figure class="screenshot screenshot-comparison">
+            <article class="annotation annotation-scanability">
+              <p class="annotation-label">Scanability</p>
+              <p>
+                The EasyFive vs ABC comparison is too dense to scan—trim copy,
+                visualize the difference, and finish with tappable fit pills.
+              </p>
+            </article>
+            <img
+              src="./review-sizing-wall.png?v=512"
+              alt="Ask lululemon chat with a long text-heavy EasyFive versus ABC comparison"
+            />
+            <span class="callout-line" aria-hidden="true"></span>
+            <span class="callout-endpoint" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+
+      <section class="review" id="pdp-sequence" aria-labelledby="sequence-title">
+        <div class="section-heading">
+          <p class="index">06</p>
+          <div>
+            <h2 id="sequence-title">Recommendation</h2>
+          </div>
+        </div>
+
+        <div class="review-canvas">
+          <figure class="screenshot screenshot-sequence">
+            <article class="annotation annotation-flow">
+              <p class="annotation-label">Sequence</p>
+              <p>
+                “What do you want to do next?” lands before the PDP—users need
+                to digest color, size, and price before choosing.
+              </p>
+            </article>
+            <img
+              src="./review-pdp-order.png?v=512"
+              alt="Ask lululemon chat asking what to do next before the product card is visible"
+            />
+            <span class="callout-line" aria-hidden="true"></span>
+            <span class="callout-endpoint" aria-hidden="true"></span>
+          </figure>
+        </div>
+      </section>
+      </div>
+
+      <div class="journey-panel" id="journey-2" data-journey="journey-2" hidden>
+        <section class="review" aria-labelledby="j2-opening-title">
+          <div class="section-heading">
+            <p class="index">01</p>
+            <div>
+              <h2 id="j2-opening-title">Typed entry</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j2-opening">
+              <article class="annotation annotation-entry">
+                <p class="annotation-label">Use case</p>
+                <p>
+                  Typing a specific shopping intent feels natural here—this
+                  entry use case is realistic and easy to understand.
+                </p>
+              </article>
+              <img
+                src="./journey-2-opening.png?v=512"
+                alt="Ask lululemon chat with a typed request for men's pants"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j2-header-title">
+          <div class="section-heading">
+            <p class="index">02</p>
+            <div>
+              <h2 id="j2-header-title">Overflow menu</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j2-menu">
+              <article class="annotation annotation-header">
+                <p class="annotation-label">Header</p>
+                <p>
+                  The header overflow menu feels unexpected in chat—even if
+                  app-wide, the circle treatment looks off here.
+                </p>
+              </article>
+              <img
+                src="./journey-2-opening.png?v=512"
+                alt="Ask lululemon chat header with a three-dot overflow menu"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j2-carousel-title">
+          <div class="section-heading">
+            <p class="index">03</p>
+            <div>
+              <h2 id="j2-carousel-title">Product carousel</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j2-carousel">
+              <article class="annotation annotation-viewport">
+                <p class="annotation-label">Viewport</p>
+                <p>
+                  The viewport should auto-scroll here—move the intro out,
+                  anchor the user chip top-right, and show the full carousel
+                  without manual scrolling.
+                </p>
+              </article>
+              <img
+                src="./journey-2-carousel.png?v=512"
+                alt="Ask lululemon chat with product cards cut off at the bottom of the viewport"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j2-compare-title">
+          <div class="section-heading">
+            <p class="index">04</p>
+            <div>
+              <h2 id="j2-compare-title">Compare</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j2-compare">
+              <article class="annotation annotation-compare">
+                <p class="annotation-label">Compare</p>
+                <p>
+                  The welcome still fills the viewport—this step feels static
+                  until users get clear options to compare, not just a passive
+                  carousel.
+                </p>
+              </article>
+              <img
+                src="./journey-2-carousel.png?v=512"
+                alt="Ask lululemon chat compare step with welcome text still visible above product cards"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j2-flow-end-title">
+          <div class="section-heading">
+            <p class="index">05</p>
+            <div>
+              <h2 id="j2-flow-end-title">End of flow</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j2-flow-end">
+              <article class="annotation annotation-flow-end">
+                <p class="annotation-label">Flow</p>
+                <p>
+                  This is the last screen in the prototype—there is no next step
+                  into sizing, color, or add to cart.
+                </p>
+              </article>
+              <img
+                src="./journey-2-carousel.png?v=512"
+                alt="Ask lululemon chat ending at product cards without a next step"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <aside class="journey-recommendation" aria-labelledby="j2-recommendation-title">
+          <p class="journey-recommendation-label" id="j2-recommendation-title">
+            Recommendation
+          </p>
+          <p>
+            When comparing, scroll the welcome out of view and lead with
+            pickable compare options—or ask which aspects matter most. After a
+            choice, continue into sizing, color, and add to cart instead of
+            stopping at product cards.
+          </p>
+        </aside>
+      </div>
+
+      <div class="journey-panel" id="journey-3" data-journey="journey-3" hidden>
+        <section class="review" aria-labelledby="j3-chips-title">
+          <div class="section-heading">
+            <p class="index">01</p>
+            <div>
+              <h2 id="j3-chips-title">Suggestion chips</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-chips">
+              <article class="annotation annotation-chips">
+                <p class="annotation-label">Chips</p>
+                <p>
+                  “Shop” and “What’s trending” feel vague and committal—reframe
+                  to “What are you looking for?” with crisp chips like “Men’s
+                  new” or “Tennis drops.”
+                </p>
+              </article>
+              <img
+                src="./journey-3-opening.png?v=512"
+                alt="Ask lululemon chat opening with shop-oriented suggestion chips"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-shirts-title">
+          <div class="section-heading">
+            <p class="index">02</p>
+            <div>
+              <h2 id="j3-shirts-title">Category browse</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-shirts">
+              <article class="annotation annotation-relevance">
+                <p class="annotation-label">Relevance</p>
+                <p>
+                  A vague category chip leads to a generic shirt grid—nothing
+                  here narrows to what this person would actually love from
+                  their history.
+                </p>
+              </article>
+              <img
+                src="./journey-3-shirts.png?v=512"
+                alt="Ask lululemon chat showing generic men's shirts after a broad category chip"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-recommendation-title">
+          <div class="section-heading">
+            <p class="index">03</p>
+            <div>
+              <h2 id="j3-recommendation-title">Recommendation card</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-recommendation">
+              <article class="annotation annotation-signals">
+                <p class="annotation-label">Signals</p>
+                <p>
+                  “Unique” needs comparison context, price should lead, and the
+                  rating needs a star icon to read as a trust signal.
+                </p>
+              </article>
+              <img
+                src="./journey-3-recommendation.png?v=512"
+                alt="Ask lululemon recommendation card with trending badge and attributes but no visible price"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-sizing-title">
+          <div class="section-heading">
+            <p class="index">04</p>
+            <div>
+              <h2 id="j3-sizing-title">Sizing chart</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-sizing">
+              <article class="annotation annotation-sizing">
+                <p class="annotation-label">Sizing</p>
+                <p>
+                  The sizing chart link feels scripted—users want a size answer,
+                  not a PDF. Guide dimensions with animated measure steps and
+                  yes/no/other pills.
+                </p>
+              </article>
+              <img
+                src="./journey-3-sizing.png?v=512"
+                alt="Ask lululemon chat linking out to a sizing guide with a static measure image"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-signin-title">
+          <div class="section-heading">
+            <p class="index">05</p>
+            <div>
+              <h2 id="j3-signin-title">Sign-in gate</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-signin">
+              <article class="annotation annotation-friction">
+                <p class="annotation-label">Friction</p>
+                <p>
+                  Sign-in before personalization may capture accounts, but it
+                  risks drop-off right when users asked for help.
+                </p>
+              </article>
+              <img
+                src="./journey-3-signin.png?v=512"
+                alt="Ask lululemon chat requiring sign-in before personalized sizing recommendations"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-personalized-title">
+          <div class="section-heading">
+            <p class="index">06</p>
+            <div>
+              <h2 id="j3-personalized-title">Personalized welcome</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-personalized">
+              <article class="annotation annotation-personalization">
+                <p class="annotation-label">Personalization</p>
+                <p>
+                  Purchase-history picks are a start—wardrobe snapshots plus
+                  eyes and hair would make color matching feel truly personal.
+                </p>
+              </article>
+              <img
+                src="./journey-3-personalized.png?v=512"
+                alt="Ask lululemon personalized welcome back message with size and color recommendations"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-outfit-title">
+          <div class="section-heading">
+            <p class="index">07</p>
+            <div>
+              <h2 id="j3-outfit-title">Post-add CTAs</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-outfit">
+              <article class="annotation annotation-confidence">
+                <p class="annotation-label">Confidence</p>
+                <p>
+                  "Chat with a Product Expert" undercuts the agent—it signals
+                  the AI isn't the expert and invites a human fallback users may
+                  resent.
+                </p>
+              </article>
+              <img
+                src="./journey-3-outfit.png?v=512"
+                alt="Ask lululemon add to bag screen with product expert and go to bag CTAs"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-compare-title">
+          <div class="section-heading">
+            <p class="index">08</p>
+            <div>
+              <h2 id="j3-compare-title">Fit comparison</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-compare">
+              <article class="annotation annotation-scanability">
+                <p class="annotation-label">Scanability</p>
+                <p>
+                  Too dense to feel inviting—and the mint assistant bubbles feel
+                  low-contrast, dated, and off-brand for lululemon.
+                </p>
+              </article>
+              <img
+                src="./journey-3-compare.png?v=512"
+                alt="Ask lululemon text-heavy EasyFive versus ABC pants comparison in mint chat bubbles"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-table-title">
+          <div class="section-heading">
+            <p class="index">09</p>
+            <div>
+              <h2 id="j3-table-title">Comparison table</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-table">
+              <article class="annotation annotation-interaction">
+                <p class="annotation-label">Interaction</p>
+                <p>
+                  Tap any cell to pin it as a reference—composer expands so
+                  users can ask about that line in context.
+                </p>
+              </article>
+              <img
+                src="./journey-3-table.png?v=512"
+                alt="Ask lululemon product comparison table with fit and fabric rows"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-outfit-ask-title">
+          <div class="section-heading">
+            <p class="index">10</p>
+            <div>
+              <h2 id="j3-outfit-ask-title">Follow-up message</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-outfit-ask">
+              <article class="annotation annotation-voice">
+                <p class="annotation-label">Voice</p>
+                <p>
+                  "I'm definitely considering the EasyFive pants" sounds
+                  scripted—people would thank the help and ask how it pairs in
+                  an outfit.
+                </p>
+              </article>
+              <img
+                src="./journey-3-outfit-ask.png?v=512"
+                alt="Ask lululemon user follow-up asking how EasyFive pants look in an outfit"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-product-card-title">
+          <div class="section-heading">
+            <p class="index">11</p>
+            <div>
+              <h2 id="j3-product-card-title">Product media</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-product-card">
+              <article class="annotation annotation-vision">
+                <p class="annotation-label">Vision</p>
+                <p>
+                  Static thumbnail isn't enough—pinch-to-zoom, motion video, and
+                  upload-to-model with an AI generation indicator would feel
+                  next-gen.
+                </p>
+              </article>
+              <img
+                src="./journey-3-product-card.png?v=512"
+                alt="Ask lululemon EasyFive product card with color size and length selectors"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-gallery-title">
+          <div class="section-heading">
+            <p class="index">12</p>
+            <div>
+              <h2 id="j3-gallery-title">Image gallery</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-gallery">
+              <article class="annotation annotation-utility">
+                <p class="annotation-label">Utility</p>
+                <p>
+                  No way to swipe through shots or pinch for close-ups—the tiny
+                  thumbnail isn't enough to evaluate fit and fabric.
+                </p>
+              </article>
+              <img
+                src="./journey-3-gallery.png?v=512"
+                alt="Ask lululemon ABC Slim-Fit Trouser product card with single small product image"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <section class="review" aria-labelledby="j3-checkout-title">
+          <div class="section-heading">
+            <p class="index">13</p>
+            <div>
+              <h2 id="j3-checkout-title">Checkout handoff</h2>
+            </div>
+          </div>
+
+          <div class="review-canvas">
+            <figure class="screenshot screenshot-j3-checkout">
+              <article class="annotation annotation-confidence">
+                <p class="annotation-label">Confidence</p>
+                <p>
+                  Offering a Product Expert at checkout undermines the
+                  agent—the win is confident self-serve checkout, not a
+                  handoff.
+                </p>
+              </article>
+              <img
+                src="./journey-3-checkout.png?v=512"
+                alt="Ask lululemon checkout flow offering chat with a product expert after user loves the item"
+              />
+              <span class="callout-line" aria-hidden="true"></span>
+              <span class="callout-endpoint" aria-hidden="true"></span>
+            </figure>
+          </div>
+        </section>
+
+        <aside class="journey-recommendation" aria-labelledby="j3-recommendation-block-title">
+          <p class="journey-recommendation-label" id="j3-recommendation-block-title">
+            Recommendation
+          </p>
+          <p>
+            Ask what size they need, offer to take dimensions, then walk through
+            animated measure instructions with Yes / No thanks / Other pills.
+            When ready, capture the measurement—or let them come back later.
+          </p>
+        </aside>
+
+        <aside
+          class="journey-recommendation"
+          aria-labelledby="j3-personalization-rec-title"
+        >
+          <p class="journey-recommendation-label" id="j3-personalization-rec-title">
+            Recommendation
+          </p>
+          <p>
+            Ask for two wardrobe color snapshots and a photo of eyes and
+            hair—it doesn't need to be perfect—to recommend what combines well
+            for their coloring.
+          </p>
+        </aside>
+
+        <aside
+          class="journey-recommendation"
+          aria-labelledby="j3-outfit-rec-title"
+        >
+          <p class="journey-recommendation-label" id="j3-outfit-rec-title">
+            Recommendation
+          </p>
+          <p>
+            Skip the human handoff. After add-to-bag, offer "Go to my bag" and
+            "Complete the outfit"—surface complementary picks like pants, shoes,
+            socks, hats, layers, bags, sunglasses, and small accessories that
+            match what they already chose.
+          </p>
+        </aside>
+
+        <aside
+          class="journey-recommendation"
+          aria-labelledby="j3-compare-rec-title"
+        >
+          <p class="journey-recommendation-label" id="j3-compare-rec-title">
+            Recommendation
+          </p>
+          <p>
+            Split comparisons into scannable cards or chips, not one long bubble.
+            Revisit assistant bubble color—clean white or warm neutrals on a
+            light canvas, not mint.
+          </p>
+        </aside>
+
+        <aside
+          class="journey-recommendation"
+          aria-labelledby="j3-table-rec-title"
+        >
+          <p class="journey-recommendation-label" id="j3-table-rec-title">
+            Recommendation
+          </p>
+          <p>
+            Make comparison tiles tappable—e.g. "Slim fit that skims glutes
+            and thighs"—and expand the composer to show the selected line as a
+            marked reference point for follow-up questions.
+          </p>
+        </aside>
+
+        <aside
+          class="journey-recommendation"
+          aria-labelledby="j3-outfit-ask-rec-title"
+        >
+          <p class="journey-recommendation-label" id="j3-outfit-ask-rec-title">
+            Recommendation
+          </p>
+          <p>
+            Rewrite as: "Oh, thanks—this is helpful. I wonder how this looks as
+            an outfit. What would it go with?"
+          </p>
+        </aside>
+
+        <aside
+          class="journey-recommendation"
+          aria-labelledby="j3-product-media-rec-title"
+        >
+          <p class="journey-recommendation-label" id="j3-product-media-rec-title">
+            Recommendation
+          </p>
+          <p>
+            Offer hi-res pinch zoom and in-motion video; let users upload a
+            snapshot to see the piece on-model, with a generating state in
+            chat—even if costly, it sets the north star.
+          </p>
+        </aside>
+
+        <aside
+          class="journey-recommendation"
+          aria-labelledby="j3-gallery-rec-title"
+        >
+          <p class="journey-recommendation-label" id="j3-gallery-rec-title">
+            Recommendation
+          </p>
+          <p>
+            Add a flickable image gallery with pinch-to-zoom and detail
+            close-ups—the same affordances as PDP, not a single static thumb.
+          </p>
+        </aside>
+
+        <aside
+          class="journey-recommendation"
+          aria-labelledby="j3-checkout-rec-title"
+        >
+          <p class="journey-recommendation-label" id="j3-checkout-rec-title">
+            Recommendation
+          </p>
+          <p>
+            When they're ready, take them straight to bag and checkout—they
+            found what they love; skip the expert offer that signals the AI
+            can't finish the job.
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <p>Internal review / Sierra</p>
+    </footer>
+
+    <script type="module" src="./journey.js"></script>
+  </body>
+</html>
