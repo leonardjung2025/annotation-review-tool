@@ -72,16 +72,40 @@ body {
 }
 
 .journey-panel + .journey-panel {
-  padding-top: min(20vh, 180px);
-  border-top: 1px solid var(--hairline);
+  margin-top: clamp(180px, 24vh, 280px);
+  border-top: 1px solid #cfcfd2;
 }
 
-.journey-panel > .review:first-child {
+.journey-heading {
+  min-height: clamp(240px, 34vh, 360px);
+  padding: 64px clamp(28px, 6vw, 96px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #f7f7f5;
+  border-bottom: 1px solid var(--hairline);
+}
+
+.journey-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.journey-heading h2 {
+  margin: 0;
+  font-size: clamp(48px, 8vw, 112px);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+}
+
+.journey-heading + .review {
   padding-top: 120px;
-}
-
-.journey-panel + .journey-panel > .review:first-child {
-  padding-top: 0;
 }
 
 .journey-empty {
@@ -471,7 +495,16 @@ footer {
   }
 
   .journey-panel + .journey-panel {
-    padding-top: min(16vh, 120px);
+    margin-top: 120px;
+  }
+
+  .journey-heading {
+    min-height: 240px;
+    padding: 48px 22px;
+  }
+
+  .journey-heading + .review {
+    padding-top: 90px;
   }
 
   .masthead {
